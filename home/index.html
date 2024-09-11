@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>A Learning Database Management Tool</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+</style>
+</head>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    
+    <h4><b>Dashboard</b></h4>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#Dashboard" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>HOME</a> 
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+  </div>
+  <div class="w3-panel w3-large">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="Student Dashboard">
+    <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:165px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+    <h1><b>SmartEdu:</b>   An Integrated Digital Learning Ecosystem</h1>
+    <div class="w3-section w3-bottombar w3-padding-16"> 
+      <button class="w3-button w3-black" onclick="window.location.href='/site/mycourses'">My Courses</button>
+      <button class="w3-button w3-black" onclick="window.location.href='/site/profile'">My Profile</button>
+  <!-- First Photo Grid-->
+  <div>
+    <div>
+        <h4><b>Introduction to SmartEdu</b></h4>
+        <p>Smart education is a revolutionary approach to learning that leverages technology to enhance the educational experience. It combines traditional teaching methods with innovative digital tools and resources, creating a more personalized, engaging, and effective learning environment.
+        By incorporating elements like personalized learning paths, interactive content, data analytics, and virtual or augmented reality, smart education aims to:
+        </p>
+          <ul>
+             <li>Improve learning outcomes: Tailored instruction and real-time feedback help students achieve better results.</li>
+             <li>Enhance engagement: Interactive content and gamification make learning more enjoyable and motivating.</li>
+             <li>Increase accessibility: Online platforms and flexible learning options cater to diverse learners.</li>
+             <li>Foster collaboration: Virtual classrooms and online communities promote teamwork and knowledge sharing.</li>
+             <li>Prepare students for the future: Equip students with the skills needed for a technology-driven world.</li>
+          </u>
+Smart education has the potential to transform the way we learn and teach, creating a more equitable and effective educational system for all.
+        </p>
+    </div>
+<!-- 
+  <div class="w3-center w3-padding-64">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div> 
+-->
+
+    <h4 id='about'><b>About</b></h4>
+    <p>A Smart Education Platform: Your Personalized Learning Companion
+Imagine a platform that adapts to your unique learning style, offering a wealth of educational resources at your fingertips. That's what a smart education platform aims to provide.</p>
+<p><b>Key Features of a Smart Education Platform:</b></p>
+<ul>
+ <li>Personalized Learning Paths: Tailored content and assignments based on your individual needs and progress.</li>
+ <li>Interactive Content: Engaging multimedia like videos, simulations, and quizzes to make learning fun and effective.</li>
+ <li>Real-time Feedback: Instant feedback on assignments and quizzes to help you identify areas for improvement.</li>
+ <li>Adaptive Assessments: Assessments that adjust in difficulty based on your performance.</li>
+ <li>Collaboration Tools: Features for group projects, discussions, and peer-to-peer learning.</li>
+ <li>Gamification Elements: Rewards, badges, and leaderboards to motivate and encourage learning.</li>
+ <li>Accessibility Features: Options to accommodate learners with disabilities, ensuring inclusivity.</li>
+ </ul>
+<p><b>Benefits of Using a Smart Education Platform:</b></p>
+ <ul>
+ <li>Increased Engagement: Interactive content and personalized learning make education more enjoyable.</li>
+ <li>Improved Outcomes: Tailored learning paths and real-time feedback lead to better academic performance.</li>
+ <li>Flexibility: Learn at your own pace and on your own schedule.</li>
+ <li>Access to Quality Education: Gain access to a wide range of educational resources from experts.</li>
+ <li>Enhanced Collaboration: Connect with peers and collaborate on projects.</li>
+<p>Would you like to know more about specific smart education platforms or discuss how they can benefit you?</p>
+    <hr>
+    
+    
+    <hr class="w3-opacity">
+    <form id="contact" action="/action_page.php" target="_blank">
+    <div>
+      <h4 class="w3-section">Contact us</h4>
+        <label>Name of student</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email of student</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-dark-grey">
+  <div class="w3-row-padding">
+    <div class="w3-third">
+      <h3>FOOTER</h3>
+      <p>hello.</p>
+    </div>
+
+</script>
+
+</body>
+</html>
+
