@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Education</title>
+    <style>
+        /* Global Styles */
+        body {
+            background-color: #f0f4f8;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 300px;
+            height: 100%;
+            background-color: #ffffff;
+            position: fixed;
+            left: 0;
+            top: 0;
+            overflow: auto;
+            border-right: 2px solid #00bcd4;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar .header {
+            padding: 20px;
+            border-bottom: 2px solid #00bcd4;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 15px;
+            color: #004d99;
+            text-decoration: none;
+            font-size: 18px;
+            border-bottom: 1px solid #f0f4f8;
+        }
+
+        .sidebar a:hover {
+            background-color: #00bcd4;
+            color: #ffffff;
+        }
+
+        .sidebar .social-icons {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .sidebar .social-icons i {
+            margin: 0 10px;
+            color: #004d99;
+            transition: color 0.3s;
+        }
+
+        .sidebar .social-icons i:hover {
+            color: #00bcd4;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            margin-left: 300px;
+            padding: 20px;
+        }
+
+        .main-content h1 {
+            font-size: 2.5em;
+            color: #004d99;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 3px solid #00bcd4;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .button {
+            background-color: #00bcd4;
+            color: #ffffff;
+            border: none;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #004d99;
+        }
+
+        /* Form Styles */
+        .form-container {
+            background-color: #ffffff;
+            border: 2px solid #00bcd4;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 16px;
+        }
+
+        .form-container input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .form-container button {
+            background-color: #00bcd4;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .form-container button:hover {
+            background-color: #004d99;
+        }
+
+        /* Footer Styles */
+     
+
+
+            /* Footer Styles */
+        .footer {
+            background-color: #333;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 0 20px;
+            padding-left: 200px;;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 30 auto;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+            padding: 0 15px;
+        }
+
+        .footer-section h3 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #00bcd4;
+        }
+
+        .footer-section p {
+            margin: 10px 0;
+        }
+
+        .footer-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin: 10px 0;
+        }
+
+        .footer-section ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: #00bcd4;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="sidebar">
+    <div class="header">
+        <h4><b>Dashboard</b></h4>
+    </div>
+    <div class="menu">
+        <a href="#Dashboard">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#contact">CONTACT</a>
+    </div>
+    <div class="social-icons">
+        <i class="fa fa-facebook-official"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-snapchat"></i>
+        <i class="fa fa-pinterest-p"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-linkedin"></i>
+    </div>
+</nav>
+
+<!-- Main content -->
+<div id="Dashboard" class="main-content">
+    <header>
+        <h1><b>SmartEdu:</b> An Integrated Digital Learning Ecosystem</h1>
+        <div>
+            <button class="button" onclick="window.location.href='/ASOIT-BTech-Projects/mycourses'">My Courses</button>
+            <button class="button" onclick="window.location.href='/ASOIT-BTech-Projects/profile'">My Profile</button>
+        </div>
+    </header>
+
+    <!-- Content Sections -->
+    <div>
+        <h2><b>Introduction to SmartEdu</b></h2>
+        <p>Smart education is a revolutionary approach to learning that leverages technology to enhance the educational experience. It combines traditional teaching methods with innovative digital tools and resources, creating a more personalized, engaging, and effective learning environment.
+        By incorporating elements like personalized learning paths, interactive content, data analytics, and virtual or augmented reality, smart education aims to:
+        </p>
+        <ul>
+            <li>Improve learning outcomes: Tailored instruction and real-time feedback help students achieve better results.</li>
+            <li>Enhance engagement: Interactive content and gamification make learning more enjoyable and motivating.</li>
+            <li>Increase accessibility: Online platforms and flexible learning options cater to diverse learners.</li>
+            <li>Foster collaboration: Virtual classrooms and online communities promote teamwork and knowledge sharing.</li>
+            <li>Prepare students for the future: Equip students with the skills needed for a technology-driven world.</li>
+        </ul>
+        <p>Smart education has the potential to transform the way we learn and teach, creating a more equitable and effective educational system for all.</p>
+    </div>
+    <br /><br /><br /> 
+    <div>
+        <h2 id="about"><b>About</b></h2>
+        <p>A Smart Education Platform: Your Personalized Learning Companion</p>
+        <p><b>Key Features of a Smart Education Platform:</b></p>
+        <ul>
+            <li>Personalized Learning Paths: Tailored content and assignments based on your individual needs and progress.</li>
+            <li>Interactive Content: Engaging multimedia like videos, simulations, and quizzes to make learning fun and effective.</li>
+            <li>Real-time Feedback: Instant feedback on assignments and quizzes to help you identify areas for improvement.</li>
+            <li>Adaptive Assessments: Assessments that adjust in difficulty based on your performance.</li>
+            <li>Collaboration Tools: Features for group projects, discussions, and peer-to-peer learning.</li>
+            <li>Gamification Elements: Rewards, badges, and leaderboards to motivate and encourage learning.</li>
+            <li>Accessibility Features: Options to accommodate learners with disabilities, ensuring inclusivity.</li>
+        </ul>
+        <p><b>Benefits of Using a Smart Education Platform:</b></p>
+        <ul>
+            <li>Increased Engagement: Interactive content and personalized learning make education more enjoyable.</li>
+            <li>Improved Outcomes: Tailored learning paths and real-time feedback lead to better academic performance.</li>
+            <li>Flexibility: Learn at your own pace and on your own schedule.</li>
+            <li>Access to Quality Education: Gain access to a wide range of educational resources from experts.</li>
+            <li>Enhanced Collaboration: Connect with peers and collaborate on projects.</li>
+        </ul>
+        <p>Would you like to know more about specific smart education platforms or discuss how they can benefit you?</p>
+    </div>
+    <br /><br /><br />
+    <div class="form-container" id="contact">
+        <h4>Contact us</h4>
+        <form action="/action_page.php" target="_blank">
+            <label for="name">Name of student</label>
+            <input type="text" id="name" name="Name" required>
+
+            <label for="email">Email of student</label>
+            <input type="text" id="email" name="Email" required>
+
+            <label for="message">Message</label>
+            <input type="text" id="message" name="Message" required>
+
+            <button type="submit"><i class="fa fa-paper-plane"></i> Send Message</button>
+        </form>
+    </div>
+</div>
+
+<!-- Footer -->
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+      <div class="footer-content">
+          <div class="footer-section">
+              <h3>Contact Us</h3>
+              <p>If you have any questions or need further information, feel free to reach out to us!</p>
+              <p><strong>Email:</strong> support@smarteedu.com</p>
+              <p><strong>Phone:</strong> +1 234 567 890</p>
+          </div>
+
+          <div class="footer-section">
+              <h3>Quick Links</h3>
+              <ul>
+                  <li><a href="#Dashboard">Home</a></li>
+                  <li><a href="#about">About Us</a></li>
+                  <li><a href="#contact">Contact Us</a></li>
+                  <li><a href="/site/mycourses">My Courses</a></li>
+                  <li><a href="/site/profile">My Profile</a></li>
+              </ul>
+          </div>
+
+          <div class="footer-section">
+              <h3>About SmartEdu</h3>
+              <p>SmartEdu is an innovative digital learning platform that integrates technology with education to create personalized and engaging learning experiences. Our goal is to enhance educational outcomes and make learning accessible and enjoyable for everyone.</p>
+          </div>
+      </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

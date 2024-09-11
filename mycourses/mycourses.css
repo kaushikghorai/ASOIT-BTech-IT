@@ -1,0 +1,70 @@
+body {
+  background-color: #f0f4f8;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+#headingMyCourse {
+  font-size: 2.5em; /* Larger font size */
+  color: #004d99; /* Dark blue color */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  font-weight: bold; /* Make text bold */
+  text-transform: uppercase; /* Uppercase letters */
+  letter-spacing: 2px; /* Spacing between letters */
+  border-bottom: 3px solid #00bcd4; /* Bottom border */
+  padding-bottom: 10px; /* Space between text and border */
+  display: inline-block; /* Fit border to text width */
+}
+
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.course-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.course-item {
+  background-color: #ffffff;
+  border: 2px solid #00bcd4;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.course-item:hover {
+  transform: scale(1.05);
+}
+
+.course-img {
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.subjectName {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.std {
+  font-size: 1em;
+  color: #666;
+}
