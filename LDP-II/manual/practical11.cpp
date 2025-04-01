@@ -1,4 +1,4 @@
-#include<iotream>
+#include<iostream>
 class shorting{
     int a, b, c;
     int increasing(){
