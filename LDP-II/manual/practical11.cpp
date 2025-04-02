@@ -1,8 +1,19 @@
 #include<iostream>
-class shorting{
-    int a, b, c;
-    int increasing(){
-
+using namespace std;
+int main(){
+    int arr[3];
+    for(int i=0;i<3;i++){
+        cin >> arr[i];
     }
-    int decreasing(int a, int b, int c)
+    for(int i=0;i<2;i++){
+        if(arr[i]<arr[i+1]){
+            arr[i]=arr[i]+arr[i+1];
+            arr[i+1]=arr[i]-arr[i+1];
+            arr[i]=arr[i]-arr[i+1];
+            i=-1;
+        }
+    }
+    for(int i=0;i<3;i++){
+        cout << arr[i] << endl;
+    }
 }

@@ -1,17 +1,22 @@
 #include<stdio.h>
 #include<stdlib.h>
 void main(){
-    FILE *fpin, *fpodd, *fpeven;
+    FILE *fnum, *fodd, *feven;
     int num;
-    fpin = fopen("numbers.txt","r");
-    fpeven = fopen("even.txt","w");
-    fpodd = fopen("odd.txt","w");
-    while(fscanf(fpin, "%d", &num) != EOF){
-        if(num%2==0) fprintf(fpeven,"%d\n",num);
-        else fprintf(fpodd,"%d",num);
+    fnum = fopen("numbers.txt","w");
+    feven = fopen("even.txt","w");
+    fodd = fopen("odd.txt","w");
+    int innum;
+    for(int i=0;i<10;i++){
+        scanf("%d", &innum);
+        fprintf(fnum, "%d\n", innum);
     }
-    fclose(fpin);
-    fclose(fpodd);
-    fclose(fpeven);
+    while(fscanf(fnum, "%d", &num) != EOF){
+        if(num%2==0) fprintf(feven,"%d\n",num);
+        else fprintf(fodd,"%d",num);
+    }
+    fclose(fnum);
+    fclose(fodd);
+    fclose(feven);
 
 }
