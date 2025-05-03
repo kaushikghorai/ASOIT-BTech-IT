@@ -1,31 +1,55 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<math.h>
 void main(){
     FILE *fnum, *fodd, *feven;
-    char num, innum;
-    fnum = fopen("numbers.txt", "w+");
-    feven = fopen("even.txt", "w+");
-    fodd = fopen("odd.txt", "w+");
+    int num, innum, size;
+
+    fnum = fopen("numbers.txt", "w");
+
+    printf("Enter size of file: ");
+    scanf("%d",&size);
+
     printf("Enter 10 numbers (0-9):\n");
-    for (int i = 0; i < 10; i++) {
-        scanf("%c", &innum);
-        putc(innum, fnum);
+    for (int i = 0; i < size; i++) {
+        scanf("%d", &innum);
+        fputc(innum, fnum);
     }
-    rewind(fnum);
-    while ((num = getc(fnum)) != EOF) {
-        if (num % 2 == 0) putc(num, feven);
-        else putc(num, fodd);
+
+    fclose(fnum);
+
+    fnum = fopen("numbers.txt", "r");
+    feven = fopen("even.txt", "w");
+    fodd = fopen("odd.txt", "w");
+
+    while ((num = fgetc(fnum)) != EOF) {
+        if (num % 2 == 0) fputc(num, feven);
+        else fputc(num, fodd);
     }
-    printf("Numbers in even.txt:\n");
-    rewind(feven);
-    while ((num = getc(feven)) != EOF) {
-        printf("%c ", num);
+
+    fclose(fnum);
+    fclose(feven);
+    fclose(fodd);
+
+    fnum = fopen("numbers.txt", "r");
+    feven = fopen("even.txt", "r");
+    fodd = fopen("odd.txt", "r");
+
+    printf("Numbers in numbers.txt:\n");
+    while ((num = fgetc(fnum)) != EOF) {
+        printf("%d ", num);
     }
+
+    printf("\nNumbers in even.txt:\n");
+    while ((num = fgetc(feven)) != EOF) {
+        printf("%d ", num);
+    }
+
     printf("\nNumbers in odd.txt:\n");
-    rewind(fodd);
-    while ((num = getc(fodd)) != EOF) {
-        printf("%c ", num);
+    while ((num = fgetc(fodd)) != EOF) {
+        printf("%d ", num);
     }
+
     fclose(fnum);
     fclose(fodd);
     fclose(feven);
